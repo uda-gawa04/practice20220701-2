@@ -67,26 +67,26 @@
  */
 
 //従来①
-function func1(str) {
-  return str;
-}
-//従来②
-const func1 = function (str) {
-  return str;
-};
+// function func1(str) {
+//   return str;
+// }
+// //従来②
+// const func1 = function (str) {
+//   return str;
+// };
 
-console.log(func1("fung1です"));
-//strは引数
+// console.log(func1("fung1です"));
+// //strは引数
 
-//アロー関数
-const func2 = (str) => {
-  return str; //関数で行いたい処理を書く
-};
-console.log(func2("func2です"));
+// //アロー関数
+// const func2 = (str) => {
+//   return str; //関数で行いたい処理を書く
+// };
+// console.log(func2("func2です"));
 
-//省略した形①　引数が一つの場合（）を省略できる
-const func3 = (str) => {
-  return str;
-};
-//省略した形②　中の処理が1行で終わるときは、｛｝やreturnを省略できる
-const func4 = (str) => str;
+// //省略した形①　引数が一つの場合（）を省略できる
+// const func3 = (str) => {
+//   return str;
+// };
+// //省略した形②　中の処理が1行で終わるときは、｛｝やreturnを省略できる
+// const func4 = (str) => str;
