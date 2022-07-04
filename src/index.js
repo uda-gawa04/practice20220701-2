@@ -66,7 +66,7 @@
  * アロー関数
  */
 
-//従来①
+// //従来①
 // function func1(str) {
 //   return str;
 // }
@@ -90,3 +90,42 @@
 // };
 // //省略した形②　中の処理が1行で終わるときは、｛｝やreturnを省略できる
 // const func4 = (str) => str;
+
+/**
+ * スプレッド構文
+ */
+//配列の展開
+const arr1 = [1, 2];
+console.log(arr1);
+console.log(...arr1);
+// →　配列の中身を一つ一つ分けて表示
+
+const sumFunc = (num1, num2) => console.log(num1 + num2);
+sumFunc(arr1[0], arr1[1]);
+// →　コンソールには３が表示
+sumFunc(...arr1);
+// →　コンソールには３が表示、上記をスプレッド構文で書き換えた
+
+//配列をまとめる（展開の逆）
+const arr2 = [1, 2, 3, 4, 5];
+const [num1, num2, ...arr3] = arr2;
+// arr3は配列をまとめて受け取っている
+console.log(num1);
+console.log(num2);
+console.log(arr3);
+
+//配列のコピー、結合
+const arr4 = [10, 20];
+const arr5 = [30, 40];
+
+const arr6 = [...arr4];
+// arr4のコピーを作成することができる
+// 新しい配列に、arr4の中身を順番に入れている
+
+const arr7 = [...arr4, ...arr5];
+console.log(arr7);
+// 2つ以上の配列を結合させることが出来る
+
+const arr8 = arr4;
+console.log(arr8);
+// これだと参照をコピーしているので、どちらかを書き換えるともう一方も書き換わってしまう
