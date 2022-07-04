@@ -94,38 +94,80 @@
 /**
  * スプレッド構文
  */
-//配列の展開
-const arr1 = [1, 2];
-console.log(arr1);
-console.log(...arr1);
-// →　配列の中身を一つ一つ分けて表示
 
-const sumFunc = (num1, num2) => console.log(num1 + num2);
-sumFunc(arr1[0], arr1[1]);
-// →　コンソールには３が表示
-sumFunc(...arr1);
-// →　コンソールには３が表示、上記をスプレッド構文で書き換えた
+// //配列の展開
+// const arr1 = [1, 2];
+// console.log(arr1);
+// console.log(...arr1);
+// // →　配列の中身を一つ一つ分けて表示
 
-//配列をまとめる（展開の逆）
-const arr2 = [1, 2, 3, 4, 5];
-const [num1, num2, ...arr3] = arr2;
-// arr3は配列をまとめて受け取っている
-console.log(num1);
-console.log(num2);
-console.log(arr3);
+// const sumFunc = (num1, num2) => console.log(num1 + num2);
+// sumFunc(arr1[0], arr1[1]);
+// // →　コンソールには３が表示
+// sumFunc(...arr1);
+// // →　コンソールには３が表示、上記をスプレッド構文で書き換えた
 
-//配列のコピー、結合
-const arr4 = [10, 20];
-const arr5 = [30, 40];
+// //配列をまとめる（展開の逆）
+// const arr2 = [1, 2, 3, 4, 5];
+// const [num1, num2, ...arr3] = arr2;
+// // arr3は配列をまとめて受け取っている
+// console.log(num1);
+// console.log(num2);
+// console.log(arr3);
 
-const arr6 = [...arr4];
-// arr4のコピーを作成することができる
-// 新しい配列に、arr4の中身を順番に入れている
+// //配列のコピー、結合
+// const arr4 = [10, 20];
+// const arr5 = [30, 40];
 
-const arr7 = [...arr4, ...arr5];
-console.log(arr7);
-// 2つ以上の配列を結合させることが出来る
+// const arr6 = [...arr4];
+// // arr4のコピーを作成することができる
+// // 新しい配列に、arr4の中身を順番に入れている
 
-const arr8 = arr4;
-console.log(arr8);
-// これだと参照をコピーしているので、どちらかを書き換えるともう一方も書き換わってしまう
+// const arr7 = [...arr4, ...arr5];
+// console.log(arr7);
+// // 2つ以上の配列を結合させることが出来る
+
+// const arr8 = arr4;
+// console.log(arr8);
+// // これだと参照をコピーしているので、どちらかを書き換えるともう一方も書き換わってしまう
+
+/**
+ * mapやfilterを使った配列の処理
+ */
+
+//  //for文を使った、従来の書き方
+//  const nameArr = ["田中", "yamada", "Tom"];
+// for (let index = 0; index < nameArr.length; index++) {
+//   console.log(nameArr[index]);
+// }
+// // →　配列の中身が順番に表示
+
+//mapを使う
+// const nameArr2 = nameArr.map((name)=>{
+//   return name;
+// })
+// console.log(nameArr2);
+
+//  nameArr.map((name, index) => console.log(`${index + 1} is ${name}`));
+
+// filterを使う
+// const numArr = [1, 2, 3, 4, 5];
+// const newNumArr = numArr.filter((num) => {
+//   return num % 2 === 0;
+// });
+// console.log(newNumArr);
+
+// const nameArr = ["田中", "yamada", "Tom"];
+// for (let index = 0; index < nameArr.length; index++) {
+//   console.log(`${index + 1}番目は${nameArr[index]}です`);
+// }
+
+const nameArr = ["田中", "yamada", "Tom"];
+const newNameArr = nameArr.map((name) => {
+  if (name === "Tom") {
+    return name;
+  } else {
+    return `${name}さん`;
+  }
+});
+console.log(newNameArr);
