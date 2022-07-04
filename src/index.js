@@ -191,3 +191,36 @@
 // }
 // console.log(checkSum(50, 40));
 // console.log(checkSum(50, 51));
+
+/**
+ * 論理演算子
+ */
+
+// const flag1 = true;
+// const flag2 = false;
+
+// if (flag1 || flag2) {
+//   console.log("1か2はtrueです");
+// }
+// if (flag1 && flag2) {
+//   console.log("1も2もtrueです");
+// }
+
+// const num = null;
+// const fee = num || "金額未設定です";
+// console.log(fee);
+
+// const num2 = 100;
+// const fee2 = num2 || "金額未設定です";
+// console.log(fee2);
+
+// 　||は、「この左側がfalseとなるとき、右側を返す。tureのときは、左側をそのまま返す」という処理をする
+// null=false → 右側を返す
+
+// const num = null;
+// const fee = num && "何か設定されました";
+// console. log(fee);
+
+// const num2 = 100;
+// const fee2 = num2 && "何か設定されました";
+// console. log(fee2);
